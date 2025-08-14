@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Web Audy Gading Pramudya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 25px;
+        }
+
+        
+        .main-header {
+            background: #1a202c;
+            color: #fff;
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #63b3ed;
+            letter-spacing: 1px;
+        }
+
+    
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .main-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #63b3ed;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav a:hover::after,
+        .main-nav a.active::after {
+            width: 100%;
+        }
+
+    
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1516110833957-e1cd1639a03c?q=80&w=2940&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 25px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Roboto', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Main Content Sections --- */
+        main section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        main section:nth-of-type(even) {
+            background-color: #e2e8f0;
+        }
+
+        .section-title {
+            font-size: 2.75rem;
+            margin-bottom: 2rem;
+            color: #2b6cb0;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: #63b3ed;
+            border-radius: 2px;
+        }
+
+        section p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: #555;
+        }
+        
+        
+        .profile-img-container {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .profile-img-container img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+        
+        .contact p {
+            font-size: 1.25rem;
+            margin: 1rem 0;
+        }
+        
+        .contact a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .contact a:hover {
+            color: #63b3ed;
+            text-decoration: underline;
+        }
+
+        
+        .site-footer {
+            background: #1a202c;
+            color: #a0aec0;
+            text-align: center;
+            padding: 25px 0;
+            border-top: 3px solid #2d3748;
+        }
+
+        
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-nav ul {
+                gap: 15px;
+            }
+            
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            main section {
+                padding: 60px 0;
+            }
+        }
+
+
+       
+#teman .friend-images-container {
+   display: flex; 
+   justify-content: center; 
+   align-items: center; 
+   gap: 20px; 
+   margin-top: 20px; 
+   flex-wrap: wrap; 
+}
+
+#teman .friend-images-container img {
+   width: 150px; 
+   height: 150px;
+   border-radius: 10px;
+   object-fit: cover;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#teman p {
+   margin-top: 20px; 
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="site-title">My Website</h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#beranda" class="active">Beranda</a></li>
+                    <li><a href="#tentang">Tentang Saya</a></li>
+                    <li><a href="#teman">Teman Saya</a></li>
+                    <li><a href="#projek">Projek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="beranda" class="hero">
+            <div class="container">
+                <h2>Halo, saya Audy.</h2>
+                <p>Seorang siswa SMK yang bersemangat di bidang Rekayasa Perangkat Lunak.</p>
+            </div>
+        </section>
+
+        <section id="tentang" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p>Saya Audy Gading Pramudya, seorang siswa kelas 11 di SMK Negeri 6 Kota Tangerang Selatan dengan jurusan **Rekayasa Perangkat Lunak**. Saya memiliki ketertarikan yang besar pada dunia teknologi, terutama dalam pengembangan perangkat lunak dan desain web. Saya selalu bersemangat untuk belajar hal baru dan mengasah keterampilan saya untuk menjadi developer yang lebih baik.</p>
+                <div class="profile-img-container">
+                    <img src="gading.png" alt="Foto Audy Gading Pramudya">
+                </div>
+            </div>
+        </section>
+
+        <section id="teman" class="friend">
+        <div class="container">
+            <h2 class="section-title">Teman Saya</h2>
+            <div class="friend-images-container">
+                <img src="gading.png" alt="Foto Teman Saya 1">
+                <img src="gading.png" alt="Foto Teman Saya 2">
+                <img src="gading.png" alt="Foto Teman Saya 3">
+                </div>
+            
+        </div>
+        </section>
+
+        <section id="projek" class="projects">
+            <div class="container">
+                <h2 class="section-title">Projek & Keterampilan</h2>
+                <p>Di bawah ini adalah beberapa contoh proyek yang pernah saya kerjakan atau teknologi yang saya kuasai. Saya selalu berusaha untuk terus meningkatkan kemampuan saya.</p>
+                <p><i>(Tambahkan konten proyek Anda di sini, misalnya deskripsi, gambar, atau tautan ke GitHub)</i></p>
+            </div>
+        </section>
+
+        <section id="kontak" class="contact">
+            <div class="container">
+                <h2 class="section-title">Hubungi Saya</h2>
+                <p>Jika Anda tertarik untuk berkolaborasi atau sekadar ingin bertanya, jangan ragu untuk menghubungi saya!</p>
+                <p>Telepon: <a href="tel:081288473893">0812-8847-3893</a></p>
+                <p>Email: <a href="mailto:audygadingp17@gmail.com">audygadingp17@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 Audy Gading Pramudya. Hak Cipta Dilindungi Undang-Undang.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.main-nav a').forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
